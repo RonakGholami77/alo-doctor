@@ -1,16 +1,23 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
+import {Vazirmatn , Markazi_Text , Noto_Kufi_Arabic} from 'next/font/google'
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const vazirmatn = Vazirmatn({
+    subsets: ['latin' , 'arabic'],
+    variable: '--font-vazirmatn',
+    display: 'swap',
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+
+const markazi = Markazi_Text({
+    subsets: ['latin' , 'arabic'],
+    variable: '--font-markazi',
+    display: 'swap',
+});
+
+const kufi = Noto_Kufi_Arabic({
+    subsets: ['latin' , 'arabic'],
+    variable: '--font-kufi',
+    display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -24,8 +31,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="fa" dir="rtl" className={`${vazirmatn.variable} ${markazi.variable} ${kufi.variable}`}>
+      <body>
         {children}
       </body>
     </html>
