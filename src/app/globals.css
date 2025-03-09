@@ -62,6 +62,7 @@ a {
 
 html {
   font-family: var(--font-vazirmatn);
+  color-scheme: dark;
 }
 
 h1 {
@@ -70,4 +71,9 @@ h1 {
 
 p {
   font-family: var(--font-markazi);
+}
+
+body {
+  background-color: var(--color-default-background);
+  color: var(--color-default-foreground);
 }
