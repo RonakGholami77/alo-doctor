@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Vazirmatn, Markazi_Text, Noto_Kufi_Arabic } from "next/font/google";
+import HeaderComponent from "@/components/header/header.component";
 
 const vazirmatn = Vazirmatn({
   subsets: ["latin", "arabic"],
@@ -36,7 +37,10 @@ export default function RootLayout({
       dir="rtl"
       className={`${vazirmatn.variable} ${markazi.variable} ${kufi.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <HeaderComponent />
+        <main>{children}</main>
+      </body>
     </html>
   );
 }
