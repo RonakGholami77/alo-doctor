@@ -4,6 +4,8 @@ import MyDoctorLogo from "@/logo/my-doctor.logo";
 import styles from "./page.module.css";
 
 export default function Home() {
+  throw Error("init error");
+
   return (
     <div className={styles.home}>
       <h1>
