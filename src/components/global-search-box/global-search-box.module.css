@@ -13,7 +13,7 @@
   .prefix {
     display: grid;
     align-items: center;
-    font-size: 1.5rem;
+    font-size: var(--fz-500);
   }
 
   input {
@@ -52,7 +52,7 @@
       cursor: pointer;
 
       svg {
-        font-size: 1.5rem;
+        font-size: var(--fz-500);
       }
 
       &:hover {

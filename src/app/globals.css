@@ -81,6 +81,8 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
 
+  font-size: var(--fz-400);
+
   min-block-size: 100vh;
   min-block-size: 100dvh;
 
